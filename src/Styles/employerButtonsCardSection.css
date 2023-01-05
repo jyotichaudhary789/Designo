@@ -1,0 +1,64 @@
+.employerButtonsCardSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    text-decoration: none;
+    color: var(--white);
+    text-align: center;
+    padding: 20px 24px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 2.5rem;
+    margin-bottom: -5.5rem;
+    position: relative;
+}
+
+.employerButtonsCardSection::before {
+    position: absolute;
+    content: "";
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+    transition: var(--transition);
+}
+
+.employerButtonsCardSection:hover::before,
+.employerButtonsCardSection:focus::before {
+    background: rgba(231, 129, 107, 0.8);
+}
+
+.employerButtonsCardSection:focus {
+    outline: none;
+}
+
+.employerButtonsCardSection h2 {
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 1.75rem;
+}
+
+.employerButtonsCardSection span {
+    margin-top: 12px;
+    text-transform: uppercase;
+}
+
+.employerButtonsCardSection span img {
+    margin-left: 20px;
+}
+
+.employerButtonsCardSection h2,
+.employerButtonsCardSection span {
+    z-index: 2;
+}
+
+@media (min-width:670px) {
+    .employerButtonsCardSection h2 {
+        font-size: 2.5rem;
+    }
+}
